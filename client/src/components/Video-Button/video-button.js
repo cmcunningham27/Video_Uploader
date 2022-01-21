@@ -8,8 +8,8 @@ export default function VideoButton() {
     const successCallBack = (res) => {
         console.log(res.info);
         API.savePath(res.info.url)
-        .then((data) => {
-            console.log(data, 'savePath data return');
+        .then((res) => {
+            console.log(res.data.url, 'savePath data return');
         })
     };
 

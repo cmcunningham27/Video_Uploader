@@ -4,8 +4,12 @@ const Videos = db.Videos;
 module.exports = {
     path: function(req, res) {
         console.log(req.body.url);
-        // Videos.create({
-        //     path: req.body.path
-        // })
+        Videos.create({
+            path: req.body.url
+        }).then((data) => {
+            res.status(200).send({
+                url: data.path
+            })
+        })
     },
 };
