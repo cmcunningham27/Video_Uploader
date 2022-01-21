@@ -3,17 +3,16 @@ import { Widget, WidgetLoader} from 'react-cloudinary-upload-widget';
 import API from '../../util/API.js';
 
 
-export default function VideoButton() {
+export default function VideoButton({ setUrl }) {
 
     const successCallBack = (res) => {
         console.log(res.info);
         API.savePath(res.info.url)
         .then((res) => {
-            console.log(res.data.url, 'savePath data return');
+            setUrl(res.data.url);
         })
+        .catch(err => console.log(err));
     };
-
-    https://res.cloudinary.com/cmcunningham/video/upload/------path=(v1642703791/widget-upload/fbvnteynbd0pg6onte8f.mp4)
 
     return (
         <>

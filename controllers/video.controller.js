@@ -10,6 +10,8 @@ module.exports = {
             res.status(200).send({
                 url: data.path
             })
-        })
+        }).catch(err => {
+            res.status(500).send({ message: err.message })
+        });
     },
 };
