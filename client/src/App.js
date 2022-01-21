@@ -17,7 +17,7 @@ function App() {
       setVideosData(videos.data);
     })
     .catch(err => console.log(err));
-  }, []);
+  }, [url]);
 
 
   return (

@@ -20,6 +20,7 @@ export default function VideoButton({ setUrl }) {
             />
             <Widget
                 cloudName='cmcunningham'
+                sources={['local', 'url', 'dropbox', 'google_drive']}
                 resourceType='video'
                 uploadPreset='video-upload'
                 folder='widget-upload'
