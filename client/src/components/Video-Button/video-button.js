@@ -7,7 +7,7 @@ export default function VideoButton({ setUrl }) {
 
     const successCallBack = (res) => {
         console.log(res.info);
-        API.savePath(res.info.url)
+        API.savePath(res.info.url, res.info.original_filename)
         .then((res) => {
             setUrl(res.data.url);
         })
