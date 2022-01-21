@@ -6,9 +6,9 @@ class Videos extends Model {};
 Videos.init(
     {
         id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
-            primarykey: true,
+            primaryKey: true,
             autoIncrement: true
         },
         path: {

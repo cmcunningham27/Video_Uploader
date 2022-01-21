@@ -1,9 +1,16 @@
 const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/db.config');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+let corsOptions = {
+    origin: 'http://localhost:3001'
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

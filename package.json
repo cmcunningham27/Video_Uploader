@@ -8,8 +8,7 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "seed": "node seeds/seed.js"
+    "client": "cd client && npm run start"
   },
   "repository": {
     "type": "git",
@@ -22,12 +21,15 @@
   },
   "homepage": "https://github.com/cmcunningham27/Video_Uploader#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
+    "if-env": "^1.0.4",
     "mysql2": "^2.3.3",
     "sequelize": "^6.13.0"
   },
   "devDependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
   }
 }
