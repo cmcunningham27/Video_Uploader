@@ -19,14 +19,13 @@ function App() {
     .catch(err => console.log(err));
   }, []);
 
-  console.log(videosData, 'how do i get name')
 
   return (
     <div className="App">
       <header className="App-header">
         <VideoButton setUrl={setUrl}/>
         <Video url={url}/>
-        {videosData.length  ? videosData.map((video, i) => {
+        {videosData.length  ? videosData.slice(0).reverse().map((video, i) => {
           return (
             <VideoInfo
             key={i}
